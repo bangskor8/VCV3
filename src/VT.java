@@ -281,7 +281,9 @@ public class VT {
     }
 
     public static void main(String[] args) {
-       VT trainer = new VT();
+        VT trainer = new VT();
         trainer.run();
     }
 }
+
+/*написал bangskor8 в github*/
