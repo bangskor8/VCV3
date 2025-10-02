@@ -54,8 +54,8 @@ public class VT {
     public void showMenu() {
         System.out.println("=== ТРЕНАЖЕР АНГЛИЙСКИХ СЛОВ ===");
         System.out.println("1. Показать все слова");
-        System.out.println("2. Учить слова (английский → русский)");
-        System.out.println("3. Учить слова (русский → английский)");
+        System.out.println("2. Учить слова (английский -> русский)");
+        System.out.println("3. Учить слова (русский -> английский)");
         System.out.println("4. Тест с вариантами ответов (ВСЕ 26 СЛОВ)");
         System.out.println("5. Статистика");
         System.out.println("6. Выход");
@@ -88,10 +88,10 @@ public class VT {
 
             String correctTranslation = vocabulary.get(englishWord).toLowerCase();
             if (answer.equals(correctTranslation)) {
-                System.out.println("✓ Правильно!");
+                System.out.println(":) Правильно!");
                 correctAnswers++;
             } else {
-                System.out.println("✗ Неправильно. Правильный ответ: " + vocabulary.get(englishWord));
+                System.out.println(":( Неправильно. Правильный ответ: " + vocabulary.get(englishWord));
             }
             totalQuestions++;
 
@@ -119,10 +119,10 @@ public class VT {
             }
 
             if (answer.equalsIgnoreCase(entry.getKey())) {
-                System.out.println("✓ Правильно!");
+                System.out.println(":) Правильно!");
                 correctAnswers++;
             } else {
-                System.out.println("✗ Неправильно. Правильный ответ: " + entry.getKey());
+                System.out.println(":( Неправильно. Правильный ответ: " + entry.getKey());
             }
             totalQuestions++;
 
@@ -215,17 +215,17 @@ public class VT {
         System.out.printf("Правильных ответов: %d/%d (%.1f%%)\n", testCorrect, testTotal, percentage);
 
         if (percentage == 100) {
-            System.out.println("ИДЕАЛЬНО! Ты знаешь все слова! 🎉🏆");
+            System.out.println("ИДЕАЛЬНО! Ты знаешь все слова! ");
         } else if (percentage >= 90) {
-            System.out.println("Отлично! Ты готов к сдаче! 🎉");
+            System.out.println("Отлично! Ты готов к сдаче! ");
         } else if (percentage >= 80) {
-            System.out.println("Очень хорошо! Почти идеально! 👍");
+            System.out.println("Очень хорошо! Почти идеально! ");
         } else if (percentage >= 70) {
-            System.out.println("Хорошо! Продолжай заниматься! 💪");
+            System.out.println("Хорошо! Продолжай заниматься! ");
         } else if (percentage >= 60) {
-            System.out.println("Неплохо, но нужно еще повторить слова 📚");
+            System.out.println("Неплохо, но нужно еще повторить слова");
         } else {
-            System.out.println("Нужно больше практики! Ты сможешь! 🎓");
+            System.out.println("Нужно больше практики! Ты сможешь! ");
         }
 
         System.out.println("\nТест завершен! Вы ответили на все 26 вопросов.");
